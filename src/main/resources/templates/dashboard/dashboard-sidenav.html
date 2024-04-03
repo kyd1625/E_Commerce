@@ -1,193 +1,156 @@
-<!DOCTYPE html>
-<html lang="kr" xmlns:th="http://www.thymeleaf.org" >
-<head>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta content="Codescandy" name="author" />
-    <title>Dashboard eCommerce HTML Template - FreshCart</title>
-    <!-- Favicon icon-->
-    <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon/favicon.ico}"/>
-
-    <!-- Libs CSS -->
-    <link th:href="@{/libs/bootstrap-icons/font/bootstrap-icons.min.css}" rel="stylesheet" />
-    <link th:href="@{/libs/feather-webfont/dist/feather-icons.css}" rel="stylesheet" />
-    <link th:href="@{/libs/simplebar/dist/simplebar.min.css}" rel="stylesheet" />
-
-    <!-- Theme CSS -->
-    <link rel="stylesheet" type="text/css" th:href="@{/css/theme.min.css}"/>
-
-</head>
-
-    <body>
-    <nav class="navbar-vertical-nav d-none d-xl-block" th:fragment="dashboard-sidenav">
-        <div class="navbar-vertical">
-            <div class="px-4 py-5">
-                <a th:href="@{/homepage}" class="navbar-brand">
-                    <img th:src="@{/images/logo/freshcart-logo.svg}" alt="" />
-                </a>
-            </div>
-            <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
-                <ul class="navbar-nav flex-column" id="sideNavbar">
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/dashboard/home}">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-house"></i></span>
-                                <span class="nav-link-text">대시보드</span>
-                                <span class="nav-link-text"></span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item mt-6 mb-3">
-                        <span class="nav-label">Store Managements</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/dashboard/products}">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-cart"></i></span>
-                                <span class="nav-link-text">제품 관리</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/dashboard/categories}">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
-                                <span class="nav-link-text">카테고리</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#navCategoriesOrders" aria-expanded="false" aria-controls="navCategoriesOrders">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-bag"></i></span>
-                                <span class="nav-link-text">주문</span>
-                            </div>
-                        </a>
-                        <div id="navCategoriesOrders" class="collapse" data-bs-parent="#sideNavbar">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" th:href="@{/dashboard/orderList}">주문 List</a>
-                                </li>
-                                <!-- Nav item -->
-                                <li class="nav-item">
-                                    <a class="nav-link" th:href="@{/dashboard/orderSingle}">건별 주문</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/dashboard/customer}">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-people"></i></span>
-                                <span class="nav-link-text">고객 관리</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/dashboard/reviews}">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-star"></i></span>
-                                <span class="nav-link-text">리뷰 관리</span>
-                            </div>
-                        </a>
-                    </li>
-                    <!-- Nav item -->
-                </ul>
-            </div>
+<nav class="navbar-vertical-nav d-none d-xl-block">
+    <div class="navbar-vertical">
+        <div class="px-4 py-5">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../assets/images/logo/freshcart-logo.svg" alt="" />
+            </a>
         </div>
-    </nav>
-
-    <nav class="navbar-vertical-nav offcanvas offcanvas-start navbar-offcanvac" tabindex="-1" id="offcanvasExample">
-        <div class="navbar-vertical">
-            <div class="px-4 py-5 d-flex justify-content-between align-items-center">
-                <a th:href="@{/homepage}" class="navbar-brand">
-                    <img th:src="@{/images/logo/freshcart-logo.svg}" alt="" />
-                </a>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
-                <ul class="navbar-nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/dashboard/home}">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-house"></i></span>
-                                <span>대시보드</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item mt-6 mb-3">
-                        <span class="nav-label">Store Managements</span>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/dashboard/products}">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-cart"></i></span>
-                                <span class="nav-link-text">제품 관리</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" th:href="@{/dashboard/categories}">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
-                                <span class="nav-link-text">카테고리</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#navOrders" aria-expanded="false" aria-controls="navOrders">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-bag"></i></span>
-                                <span class="nav-link-text">주문</span>
-                            </div>
-                        </a>
-                        <div id="navOrders" class="collapse" data-bs-parent="#sideNavbar">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" th:href="@{/dashboard/orderList}">주문 List</a>
-                                </li>
-                                <!-- Nav item -->
-                                <li class="nav-item">
-                                    <a class="nav-link" th:href="@{/dashboard/orderSingle}">건별 주문</a>
-                                </li>
-                            </ul>
+        <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+            <ul class="navbar-nav flex-column" id="sideNavbar">
+                <li class="nav-item">
+                    <a class="nav-link" href="../dashboard/index.html">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><i class="bi bi-house"></i></span>
+                            <span class="nav-link-text">Dashboard</span>
                         </div>
-                    </li>
+                    </a>
+                </li>
+                <li class="nav-item mt-6 mb-3">
+                    <span class="nav-label">Store Managements</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../dashboard/products.html">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><i class="bi bi-cart"></i></span>
+                            <span class="nav-link-text">Products</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../dashboard/categories.html">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
+                            <span class="nav-link-text">Categories</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#navCategoriesOrders" aria-expanded="false" aria-controls="navCategoriesOrders">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><i class="bi bi-bag"></i></span>
+                            <span class="nav-link-text">Orders</span>
+                        </div>
+                    </a>
+                    <div id="navCategoriesOrders" class="collapse" data-bs-parent="#sideNavbar">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../dashboard/order-list.html">List</a>
+                            </li>
+                            <!-- Nav item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../dashboard/order-single.html">Single</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/dashboard/customer}">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-people"></i></span>
-                                <span class="nav-link-text">고객 관리</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" th:href="@{/dashboard/reviews}">
-                            <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><i class="bi bi-star"></i></span>
-                                <span class="nav-link-text">리뷰 관리</span>
-                            </div>
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="../dashboard/customers.html">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                            <span class="nav-link-text">Customers</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../dashboard/reviews.html">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><i class="bi bi-star"></i></span>
+                            <span class="nav-link-text">Reviews</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- Nav item -->
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- Libs JS -->
-    <!-- <script src="../../static/libs/jquery/dist/jquery.min.js"></script> -->
-    <script th:src="@{/libs/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
-    <script th:src="@{/libs/simplebar/dist/simplebar.min.js}"></script>
+<nav class="navbar-vertical-nav offcanvas offcanvas-start navbar-offcanvac" tabindex="-1" id="offcanvasExample">
+    <div class="navbar-vertical">
+        <div class="px-4 py-5 d-flex justify-content-between align-items-center">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../assets/images/logo/freshcart-logo.svg" alt="" />
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+            <ul class="navbar-nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="../dashboard/index.html">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><i class="bi bi-house"></i></span>
+                            <span>Dashboard</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item mt-6 mb-3">
+                    <span class="nav-label">Store Managements</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../dashboard/products.html">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><i class="bi bi-cart"></i></span>
+                            <span class="nav-link-text">Products</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../dashboard/categories.html">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
+                            <span class="nav-link-text">Categories</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#navOrders" aria-expanded="false" aria-controls="navOrders">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><i class="bi bi-bag"></i></span>
+                            <span class="nav-link-text">Orders</span>
+                        </div>
+                    </a>
+                    <div id="navOrders" class="collapse" data-bs-parent="#sideNavbar">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../dashboard/order-list.html">List</a>
+                            </li>
+                            <!-- Nav item -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="../dashboard/order-single.html">Single</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
 
-    <!-- Theme JS -->
-    <script th:src="@{/js/theme.min.js}"></script>
+                <li class="nav-item">
+                    <a class="nav-link" href="../dashboard/customers.html">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                            <span class="nav-link-text">Customers</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../dashboard/reviews.html">
+                        <div class="d-flex align-items-center">
+                            <span class="nav-link-icon"><i class="bi bi-star"></i></span>
+                            <span class="nav-link-text">Reviews</span>
+                        </div>
+                    </a>
+                </li>
 
-    <script th:src="@{/libs/apexcharts/dist/apexcharts.min.js}"></script>
-    <script th:src="@{/js/vendors/chart.js}"></script>
-    </body>
-</html>
+            </ul>
+        </div>
+    </div>
+</nav>

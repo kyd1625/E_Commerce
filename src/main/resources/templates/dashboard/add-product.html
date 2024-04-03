@@ -6,31 +6,42 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
       <meta content="Codescandy" name="author" />
       <title>Add Product Dashboard eCommerce HTML Template - FreshCart</title>
-      <link th:href="@{/libs/dropzone/dist/min/dropzone.min.css}" rel="stylesheet" />
+      <link href="../libs/dropzone/dist/min/dropzone.min.css" rel="stylesheet" />
       <!-- Favicon icon-->
-      <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon/favicon.ico}"/>
+      <link rel="shortcut icon" type="image/x-icon" href="../images/favicon/favicon.ico" />
 
       <!-- Libs CSS -->
-      <link th:href="@{/libs/bootstrap-icons/font/bootstrap-icons.min.css}" rel="stylesheet" />
-      <link th:href="@{/libs/feather-webfont/dist/feather-icons.css}" rel="stylesheet" />
-      <link th:href="@{/libs/simplebar/dist/simplebar.min.css}" rel="stylesheet" />
+      <link href="../libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+      <link href="../libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
+      <link href="../libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
 
       <!-- Theme CSS -->
-      <link rel="stylesheet" type="text/css" th:href="@{/css/theme.min.css}"/>
+      <link rel="stylesheet" href="../css/theme.min.css" />
+
+      <!-- JQuery -->
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+            <script type="text/javascript">
+               $(document).ready( function() {
+
+                  $("#sidenav").load("./dashboard-sidenav.html");
+                  $("#headnav").load("./dashboard-headnav.html");
 
 
+               });
+            </script>
    </head>
 
    <body>
       <!-- main wrapper -->
 
       <!-- navbar -->
-      <nav th:insert="~{dashboard/dashboard-headnav :: dashboard-headnav}"></nav>
+      <nav id="headnav"></nav>
 
       <div class="main-wrapper">
          <!-- navbar vertical -->
          <!-- navbar -->
-         <nav th:insert="~{dashboard/dashboard-sidenav :: dashboard-sidenav}"></nav>
+         <nav id="sidenav"></nav>
 
          <!-- main -->
          <main class="main-content-wrapper">
@@ -201,16 +212,16 @@
       </div>
 
       <!-- Libs JS -->
-      <!-- <script src="../../static/libs/jquery/dist/jquery.min.js"></script> -->
-      <script th:src="@{/libs/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
-      <script th:src="@{/libs/simplebar/dist/simplebar.min.js}"></script>
+      <!-- <script src="../libs/jquery/dist/jquery.min.js"></script> -->
+      <script src="../libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="../libs/simplebar/dist/simplebar.min.js"></script>
 
       <!-- Theme JS -->
-      <script th:src="@{/js/theme.min.js}"></script>
+      <script src="../js/theme.min.js"></script>
 
-      <script th:src="@{/libs/quill/dist/quill.min.js}"></script>
-      <script th:src="@{/js/vendors/editor.js}"></script>
-      <script th:src="@{/libs/dropzone/dist/min/dropzone.min.js}"></script>
-      <script th:src="@{/js/vendors/dropzone.js}"></script>
+      <script src="../libs/quill/dist/quill.min.js"></script>
+      <script src="../js/vendors/editor.js"></script>
+      <script src="../libs/dropzone/dist/min/dropzone.min.js"></script>
+      <script src="../js/vendors/dropzone.js"></script>
    </body>
 </html>
