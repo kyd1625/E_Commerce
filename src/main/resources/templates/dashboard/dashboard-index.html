@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr" xmlns:th="http://www.thymeleaf.org" >
    <head>
       <!-- Required meta tags -->
       <meta charset="utf-8" />
@@ -7,40 +7,28 @@
       <meta content="Codescandy" name="author" />
       <title>Dashboard eCommerce HTML Template - FreshCart</title>
       <!-- Favicon icon-->
-      <link rel="shortcut icon" type="image/x-icon" href="../../static/images/favicon/favicon.ico" />
+      <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon/favicon.ico}"/>
 
       <!-- Libs CSS -->
-      <link href="../../static/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
-      <link href="../../static/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
-      <link href="../../static/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+      <link th:href="@{/libs/bootstrap-icons/font/bootstrap-icons.min.css}" rel="stylesheet" />
+      <link th:href="@{/libs/feather-webfont/dist/feather-icons.css}" rel="stylesheet" />
+      <link th:href="@{/libs/simplebar/dist/simplebar.min.css}" rel="stylesheet" />
 
       <!-- Theme CSS -->
-      <link rel="stylesheet" href="../../static/css/theme.min.css" />
+      <link rel="stylesheet" type="text/css" th:href="@{/css/theme.min.css}"/>
 
-      <!-- JQuery -->
-      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-                  <script type="text/javascript">
-                     $(document).ready( function() {
-
-                        $("#sidenav").load("./dashboard-sidenav.html");
-                        $("#headnav").load("./dashboard-headnav.html");
-
-
-                     });
-                  </script>
    </head>
 
    <body>
       <!-- main -->
       <div>
          <!-- navbar -->
-         <nav id="headnav"></nav>
+         <nav th:insert="~{dashboard/dashboard-headnav :: dashboard-headnav}"></nav>
 
          <div class="main-wrapper">
             <!-- navbar vertical -->
             <!-- navbar -->
-            <nav id="sidenav"></nav>
+            <nav th:insert="~{dashboard/dashboard-sidenav :: dashboard-sidenav}"></nav>
 
 
             <!-- main wrapper -->
@@ -419,13 +407,13 @@
 
       <!-- Libs JS -->
       <!-- <script src="../../static/libs/jquery/dist/jquery.min.js"></script> -->
-      <script src="../../static/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="../../static/libs/simplebar/dist/simplebar.min.js"></script>
+      <script th:src="@{/libs/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
+      <script th:src="@{/libs/simplebar/dist/simplebar.min.js}"></script>
 
       <!-- Theme JS -->
-      <script src="../../static/js/theme.min.js"></script>
+      <script th:src="@{/js/theme.min.js}"></script>
 
-      <script src="../../static/libs/apexcharts/dist/apexcharts.min.js"></script>
-      <script src="../../static/js/vendors/chart.js"></script>
+      <script th:src="@{/libs/apexcharts/dist/apexcharts.min.js}"></script>
+      <script th:src="@{/js/vendors/chart.js}"></script>
    </body>
 </html>
