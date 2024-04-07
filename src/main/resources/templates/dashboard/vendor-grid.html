@@ -17,29 +17,18 @@
       <!-- Theme CSS -->
       <link rel="stylesheet" href="../../static/css/theme.min.css" />
 
-      <!-- JQuery -->
-      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-                  <script type="text/javascript">
-                     $(document).ready( function() {
-
-                        $("#sidenav").load("./dashboard-sidenav.html");
-                        $("#headnav").load("./dashboard-headnav.html");
-
-
-                     });
-                  </script>
    </head>
 
    <body>
       <!-- main wrapper -->
       <!-- navbar -->
-      <nav id="headnav"></nav>
+      <nav th:insert="~{dashboard/dashboard-headnav :: dashboard-headnav}"></nav>
 
       <div class="main-wrapper">
          <!-- navbar vertical -->
          <!-- navbar -->
-         <nav id="sidenav"></nav>
+         <nav th:insert="~{dashboard/dashboard-sidenav :: dashboard-sidenav}"></nav>
 
          <!-- main -->
          <main class="main-content-wrapper">
