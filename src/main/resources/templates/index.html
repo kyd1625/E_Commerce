@@ -32,7 +32,7 @@
             <div class="row w-100 align-items-center g-0 gx-lg-3">
                <div class="col-xxl-9 col-lg-8">
                   <div class="d-flex align-items-center">
-                     <a class="navbar-brand d-none d-lg-block" href="index.html">
+                     <a class="navbar-brand d-none d-lg-block" th:href="@{/home}">
                         <img src="images/logo/freshcart-logo.svg" />
                      </a>
                      <div class="w-100 ms-4 d-none d-lg-block">
@@ -70,7 +70,7 @@
                      </div>
                   </div>
                   <div class="d-flex justify-content-between w-100 d-lg-none">
-                     <a class="navbar-brand" href="index.html">
+                     <a class="navbar-brand" th:href="@{/home}">
                         <img src="images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" />
                      </a>
                      <div class="d-flex align-items-center lh-1">
@@ -207,7 +207,7 @@
          <div class="container-fluid">
             <div class="offcanvas offcanvas-start" tabindex="-1" id="navbar-default" aria-labelledby="navbar-defaultLabel">
                <div class="offcanvas-header pb-1">
-                  <a href="index.html"><img src="images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" /></a>
+                  <a th:href="@{/home}"><img src="images/logo/freshcart-logo.svg" alt="eCommerce HTML Template" /></a>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                </div>
                <div class="offcanvas-body">
@@ -273,13 +273,13 @@
                      <div class="collapse mt-2" id="collapseExample">
                         <div class="card card-body">
                            <ul class="mb-0 list-unstyled">
-                              <li><a class="dropdown-item" href="shop-grid.html">Dairy, Bread & Eggs</a></li>
-                              <li><a class="dropdown-item" href="shop-grid.html">Snacks & Munchies</a></li>
-                              <li><a class="dropdown-item" href="shop-grid.html">Fruits & Vegetables</a></li>
-                              <li><a class="dropdown-item" href="shop-grid.html">Cold Drinks & Juices</a></li>
-                              <li><a class="dropdown-item" href="shop-grid.html">Breakfast & Instant Food</a></li>
-                              <li><a class="dropdown-item" href="shop-grid.html">Bakery & Biscuits</a></li>
-                              <li><a class="dropdown-item" href="shop-grid.html">Chicken, Meat & Fish</a></li>
+                              <li><a class="dropdown-item" th:href="@{/product}">Dairy, Bread & Eggs</a></li>
+                              <li><a class="dropdown-item" th:href="@{/product}">Snacks & Munchies</a></li>
+                              <li><a class="dropdown-item" th:href="@{/product}">Fruits & Vegetables</a></li>
+                              <li><a class="dropdown-item" th:href="@{/product}">Cold Drinks & Juices</a></li>
+                              <li><a class="dropdown-item" th:href="@{/product}">Breakfast & Instant Food</a></li>
+                              <li><a class="dropdown-item" th:href="@{/product}">Bakery & Biscuits</a></li>
+                              <li><a class="dropdown-item" th:href="@{/product}">Chicken, Meat & Fish</a></li>
                            </ul>
                         </div>
                      </div>
@@ -307,18 +307,18 @@
                         All Departments
                      </button>
                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="shop-grid.html">Dairy, Bread & Eggs</a></li>
-                        <li><a class="dropdown-item" href="shop-grid.html">Snacks & Munchies</a></li>
-                        <li><a class="dropdown-item" href="shop-grid.html">Fruits & Vegetables</a></li>
-                        <li><a class="dropdown-item" href="shop-grid.html">Cold Drinks & Juices</a></li>
-                        <li><a class="dropdown-item" href="shop-grid.html">Breakfast & Instant Food</a></li>
-                        <li><a class="dropdown-item" href="shop-grid.html">Bakery & Biscuits</a></li>
-                        <li><a class="dropdown-item" href="shop-grid.html">Chicken, Meat & Fish</a></li>
+                        <li><a class="dropdown-item" th:href="@{/product}">Dairy, Bread & Eggs</a></li>
+                        <li><a class="dropdown-item" th:href="@{/product}">Snacks & Munchies</a></li>
+                        <li><a class="dropdown-item" th:href="@{/product}">Fruits & Vegetables</a></li>
+                        <li><a class="dropdown-item" th:href="@{/product}">Cold Drinks & Juices</a></li>
+                        <li><a class="dropdown-item" th:href="@{/product}">Breakfast & Instant Food</a></li>
+                        <li><a class="dropdown-item" th:href="@{/product}">Bakery & Biscuits</a></li>
+                        <li><a class="dropdown-item" th:href="@{/product}">Chicken, Meat & Fish</a></li>
                      </ul>
                   </div>
                   <div>
                      <ul class="navbar-nav align-items-center navbar-offcanvas-color">
-                        
+
                         <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
                            <ul class="dropdown-menu">
@@ -344,12 +344,12 @@
                            </ul>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="index.html">Dashboard</a>
+                           <a class="nav-link" href="dashboard/index.html">Dashboard</a>
                         </li>
                         <li class="nav-item dropdown dropdown-flyout">
                            <a class="nav-link" href="#" id="navbarDropdownDocs" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Docs</a>
                            <div class="dropdown-menu dropdown-menu-lg" aria-labelledby="navbarDropdownDocs">
-                              <a class="dropdown-item align-items-start" href="index.html">
+                              <a class="dropdown-item align-items-start" th:href="@{/home}">
                                  <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-text text-primary" viewBox="0 0 16 16">
                                        <path
@@ -451,7 +451,7 @@
                               <img src="images/products/product-img-1.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                               <div class="ms-3">
                                  <!-- title -->
-                                 <a href="shop-single.html" class="text-inherit">
+                                 <a th:href="@{/product}" class="text-inherit">
                                     <h6 class="mb-0">Haldiram's Sev Bhujia</h6>
                                  </a>
                                  <span><small class="text-muted">.98 / lb</small></span>
@@ -506,7 +506,7 @@
                            <div class="d-flex">
                               <img src="images/products/product-img-2.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                               <div class="ms-3">
-                                 <a href="shop-single.html" class="text-inherit">
+                                 <a th:href="@{/product}" class="text-inherit">
                                     <h6 class="mb-0">NutriChoice Digestive</h6>
                                  </a>
                                  <span><small class="text-muted">250g</small></span>
@@ -564,7 +564,7 @@
                               <img src="images/products/product-img-3.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                               <div class="ms-3">
                                  <!-- title -->
-                                 <a href="shop-single.html" class="text-inherit">
+                                 <a th:href="@{/product}" class="text-inherit">
                                     <h6 class="mb-0">Cadbury 5 Star Chocolate</h6>
                                  </a>
                                  <span><small class="text-muted">1 kg</small></span>
@@ -623,7 +623,7 @@
                               <div class="ms-3">
                                  <!-- title -->
                                  <!-- title -->
-                                 <a href="shop-single.html" class="text-inherit">
+                                 <a th:href="@{/product}" class="text-inherit">
                                     <h6 class="mb-0">Onion Flavour Potato</h6>
                                  </a>
                                  <span><small class="text-muted">250g</small></span>
@@ -681,7 +681,7 @@
                               <img src="images/products/product-img-5.jpg" alt="Ecommerce" class="icon-shape icon-xxl" />
                               <div class="ms-3">
                                  <!-- title -->
-                                 <a href="shop-single.html" class="text-inherit">
+                                 <a th:href="@{/product}" class="text-inherit">
                                     <h6 class="mb-0">Salted Instant Popcorn</h6>
                                  </a>
                                  <span><small class="text-muted">100g</small></span>
@@ -837,7 +837,7 @@
                                  </span>
                               </div>
                               <!-- btn -->
-                              <a href="#!" class="btn btn-primary">
+                              <a th:href="@{/product}" class="btn btn-primary">
                                  Get Best Deal
                                  <i class="feather-icon icon-arrow-right ms-1"></i>
                               </a>
@@ -911,7 +911,7 @@
                                  <span class="fw-bold text-dark">CARE12</span>
                               </span>
                            </div>
-                           <a href="#" class="btn btn-dark">Shop Now</a>
+                           <a th:href="@{/product}" class="btn btn-dark">Shop Now</a>
                         </div>
                      </div>
 
@@ -932,7 +932,7 @@
                               </p>
                            </div>
 
-                           <a href="#" class="btn btn-dark">Shop Now</a>
+                           <a th:href="@{/product}" class="btn btn-dark">Shop Now</a>
                         </div>
                      </div>
                   </div>
@@ -956,7 +956,7 @@
                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xxl-6 g-6">
                   <!-- col -->
                   <div class="col">
-                     <a href="shop-grid.html" class="text-decoration-none text-inherit">
+                     <a th:href="@{/product}" class="text-decoration-none text-inherit">
                         <!-- card -->
                         <div class="card card-product">
                            <div class="card-body text-center py-8">
@@ -970,7 +970,7 @@
                   </div>
                   <!-- col -->
                   <div class="col">
-                     <a href="shop-grid.html" class="text-decoration-none text-inherit">
+                     <a th:href="@{/product}" class="text-decoration-none text-inherit">
                         <!-- card -->
                         <div class="card card-product">
                            <div class="card-body text-center py-8">
@@ -984,7 +984,7 @@
                   </div>
                   <!-- col -->
                   <div class="col">
-                     <a href="shop-grid.html" class="text-decoration-none text-inherit">
+                     <a th:href="@{/product}" class="text-decoration-none text-inherit">
                         <!-- card -->
                         <div class="card card-product">
                            <div class="card-body text-center py-8">
@@ -998,7 +998,7 @@
                   </div>
                   <!-- col -->
                   <div class="col">
-                     <a href="shop-grid.html" class="text-decoration-none text-inherit">
+                     <a th:href="@{/product}" class="text-decoration-none text-inherit">
                         <!-- card -->
                         <div class="card card-product">
                            <div class="card-body text-center py-8">
@@ -1011,7 +1011,7 @@
                   </div>
                   <!-- col -->
                   <div class="col">
-                     <a href="shop-grid.html" class="text-decoration-none text-inherit">
+                     <a th:href="@{/product}" class="text-decoration-none text-inherit">
                         <!-- card -->
                         <div class="card card-product">
                            <div class="card-body text-center py-8">
@@ -1023,7 +1023,7 @@
                      </a>
                   </div>
                   <div class="col">
-                     <a href="shop-grid.html" class="text-decoration-none text-inherit">
+                     <a th:href="@{/product}" class="text-decoration-none text-inherit">
                         <div class="card card-product">
                            <div class="card-body text-center py-8">
                               <img src="images/category/category-fruits-vegetables.jpg" alt="Grocery Ecommerce Template" class="mb-3" />
@@ -1034,7 +1034,7 @@
                   </div>
                   <!-- col -->
                   <div class="col">
-                     <a href="shop-grid.html" class="text-decoration-none text-inherit">
+                     <a th:href="@{/product}" class="text-decoration-none text-inherit">
                         <!-- card -->
                         <div class="card card-product">
                            <div class="card-body text-center py-8">
@@ -1048,7 +1048,7 @@
                   </div>
                   <!-- col -->
                   <div class="col">
-                     <a href="shop-grid.html" class="text-decoration-none text-inherit">
+                     <a th:href="@{/product}" class="text-decoration-none text-inherit">
                         <!-- card -->
                         <div class="card card-product">
                            <div class="card-body text-center py-8">
@@ -1061,7 +1061,7 @@
                   </div>
                   <!-- col -->
                   <div class="col">
-                     <a href="shop-grid.html" class="text-decoration-none text-inherit">
+                     <a th:href="@{/product}" class="text-decoration-none text-inherit">
                         <!-- card -->
                         <div class="card card-product">
                            <div class="card-body text-center py-8">
@@ -1075,7 +1075,7 @@
                   </div>
                   <!-- text -->
                   <div class="col">
-                     <a href="shop-grid.html" class="text-decoration-none text-inherit">
+                     <a th:href="@{/product}" class="text-decoration-none text-inherit">
                         <!-- card -->
                         <div class="card card-product">
                            <div class="card-body text-center py-8">
@@ -1089,7 +1089,7 @@
                   </div>
                   <!-- col -->
                   <div class="col">
-                     <a href="shop-grid.html" class="text-decoration-none text-inherit">
+                     <a th:href="@{/product}" class="text-decoration-none text-inherit">
                         <!-- card -->
                         <div class="card card-product">
                            <div class="card-body text-center py-8">
@@ -1103,7 +1103,7 @@
                   </div>
                   <!-- col -->
                   <div class="col">
-                     <a href="shop-grid.html" class="text-decoration-none text-inherit">
+                     <a th:href="@{/product}" class="text-decoration-none text-inherit">
                         <!-- card -->
                         <div class="card card-product">
                            <div class="card-body text-center py-8">
@@ -1143,23 +1143,23 @@
                               </div>
                               <!-- img -->
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-15.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-15.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
 
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Fresh Apple</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Fresh Apple</a></h2>
                            <div>
                               <!-- rating -->
 
@@ -1213,23 +1213,23 @@
                                  <span class="badge bg-success">14%</span>
                               </div>
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-16.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-16.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
                            </div>
                            <!-- title -->
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Golden Pineapple</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Golden Pineapple</a></h2>
                            <!-- rating -->
                            <div class="text-warning">
                               <!-- rating -->
@@ -1276,22 +1276,22 @@
                         <div class="card-body">
                            <div class="text-center position-relative">
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-17.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-17.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
 
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Fresh Kiwi</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Fresh Kiwi</a></h2>
                            <!-- rating -->
                            <div class="text-warning">
                               <!-- rating -->
@@ -1345,21 +1345,21 @@
                                  <span class="badge bg-danger">Hot</span>
                               </div>
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-18.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-18.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- action btn -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Fresh Banana</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Fresh Banana</a></h2>
                            <!-- rating -->
                            <div class="text-warning">
                               <!-- rating -->
@@ -1409,21 +1409,21 @@
                         <div class="card-body">
                            <div class="text-center position-relative">
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-19.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-19.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Beatroot</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Beatroot</a></h2>
                            <!-- rating -->
                            <div class="text-warning">
                               <!-- rating -->
@@ -1478,21 +1478,21 @@
                               </div>
 
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-15.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-15.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Fresh Apple</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Fresh Apple</a></h2>
                            <div>
                               <!-- rating -->
                               <small class="text-warning">
@@ -1545,21 +1545,21 @@
                                  <span class="badge bg-success">14%</span>
                               </div>
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-16.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-16.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Golden Pineapple</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Golden Pineapple</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -1605,21 +1605,21 @@
                         <div class="card-body">
                            <div class="text-center position-relative">
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-17.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-17.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Fresh Kiwi</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Fresh Kiwi</a></h2>
                            <!-- rating-->
                            <div class="text-warning">
                               <!-- rating -->
@@ -1673,21 +1673,21 @@
                                  <span class="badge bg-danger">Hot</span>
                               </div>
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-18.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-18.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Fresh Banana</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Fresh Banana</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -1736,21 +1736,21 @@
                         <div class="card-body">
                            <div class="text-center position-relative">
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-19.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-19.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Fruits & Vegetables</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Beatroot</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Beatroot</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -1816,21 +1816,21 @@
                                  <span class="badge bg-danger">Sale</span>
                               </div>
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-1.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-1.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Snack & Munchies</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Snack & Munchies</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Haldiram's Sev Bhujia</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Haldiram's Sev Bhujia</a></h2>
                            <div>
                               <small class="text-warning">
                                  <i class="bi bi-star-fill"></i>
@@ -1881,21 +1881,21 @@
                                  <span class="badge bg-success">14%</span>
                               </div>
 
-                              <a href="#!"><img src="images/products/product-img-2.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-2.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Bakery & Biscuits</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Bakery & Biscuits</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">NutriChoice Digestive</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">NutriChoice Digestive</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -1940,21 +1940,21 @@
                      <div class="card card-product">
                         <div class="card-body">
                            <div class="text-center position-relative">
-                              <a href="#!"><img src="images/products/product-img-3.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-3.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Bakery & Biscuits</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Bakery & Biscuits</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Cadbury 5 Star Chocolate</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Cadbury 5 Star Chocolate</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2006,21 +2006,21 @@
                                  <span class="badge bg-danger">Hot</span>
                               </div>
 
-                              <a href="#!"><img src="images/products/product-img-4.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-4.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Snack & Munchies</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Snack & Munchies</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Onion Flavour Potato</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Onion Flavour Potato</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2068,21 +2068,21 @@
                      <div class="card card-product">
                         <div class="card-body">
                            <div class="text-center position-relative">
-                              <a href="#!"><img src="images/products/product-img-5.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-5.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Instant Food</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Instant Food</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Salted Instant Popcorn</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Salted Instant Popcorn</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2134,21 +2134,21 @@
                                  <span class="badge bg-danger">Sale</span>
                               </div>
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-6.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-6.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Dairy, Bread & Eggs</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Dairy, Bread & Eggs</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Blueberry Greek Yogurt</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Blueberry Greek Yogurt</a></h2>
                            <div>
                               <small class="text-warning">
                                  <i class="bi bi-star-fill"></i>
@@ -2195,21 +2195,21 @@
                      <div class="card card-product">
                         <div class="card-body">
                            <div class="text-center position-relative">
-                              <a href="#!"><img src="images/products/product-img-7.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-7.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Dairy, Bread & Eggs</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Dairy, Bread & Eggs</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Britannia Cheese Slices</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Britannia Cheese Slices</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2254,21 +2254,21 @@
                      <div class="card card-product">
                         <div class="card-body">
                            <div class="text-center position-relative">
-                              <a href="#!"><img src="images/products/product-img-8.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-8.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Instant Food</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Instant Food</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Kellogg's Original Cereals</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Kellogg's Original Cereals</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2316,21 +2316,21 @@
                      <div class="card card-product">
                         <div class="card-body">
                            <div class="text-center position-relative">
-                              <a href="#!"><img src="images/products/product-img-9.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-9.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Snack & Munchies</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Snack & Munchies</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Slurrp Millet Chocolate</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Slurrp Millet Chocolate</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2378,19 +2378,19 @@
                      <div class="card card-product">
                         <div class="card-body">
                            <div class="text-center position-relative">
-                              <a href="#!"><img src="images/products/product-img-10.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-10.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye"></i></a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Dairy, Bread & Eggs</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Dairy, Bread & Eggs</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Amul Butter - 500 g</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Amul Butter - 500 g</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2454,22 +2454,22 @@
                                  <span class="badge bg-danger">Sale</span>
                               </div>
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-1.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-1.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
 
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Snack & Munchies</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Snack & Munchies</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Haldiram's Sev Bhujia</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Haldiram's Sev Bhujia</a></h2>
                            <div>
                               <small class="text-warning">
                                  <i class="bi bi-star-fill"></i>
@@ -2520,21 +2520,21 @@
                                  <span class="badge bg-success">14%</span>
                               </div>
 
-                              <a href="#!"><img src="images/products/product-img-2.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-2.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Bakery & Biscuits</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Bakery & Biscuits</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">NutriChoice Digestive</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">NutriChoice Digestive</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2579,21 +2579,21 @@
                      <div class="card card-product">
                         <div class="card-body">
                            <div class="text-center position-relative">
-                              <a href="#!"><img src="images/products/product-img-3.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-3.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Bakery & Biscuits</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Bakery & Biscuits</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Cadbury 5 Star Chocolate</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Cadbury 5 Star Chocolate</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2645,21 +2645,21 @@
                                  <span class="badge bg-danger">Hot</span>
                               </div>
 
-                              <a href="#!"><img src="images/products/product-img-4.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-4.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Snack & Munchies</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Snack & Munchies</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Onion Flavour Potato</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Onion Flavour Potato</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2707,21 +2707,21 @@
                      <div class="card card-product">
                         <div class="card-body">
                            <div class="text-center position-relative">
-                              <a href="#!"><img src="images/products/product-img-5.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-5.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Instant Food</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Instant Food</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Salted Instant Popcorn</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Salted Instant Popcorn</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2773,10 +2773,10 @@
                                  <span class="badge bg-danger">Sale</span>
                               </div>
                               <!-- img -->
-                              <a href="#!"><img src="images/products/product-img-6.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-6.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
@@ -2785,9 +2785,9 @@
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Dairy, Bread & Eggs</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Dairy, Bread & Eggs</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Blueberry Greek Yogurt</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Blueberry Greek Yogurt</a></h2>
                            <div>
                               <small class="text-warning">
                                  <i class="bi bi-star-fill"></i>
@@ -2834,21 +2834,21 @@
                      <div class="card card-product">
                         <div class="card-body">
                            <div class="text-center position-relative">
-                              <a href="#!"><img src="images/products/product-img-7.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-7.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Dairy, Bread & Eggs</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Dairy, Bread & Eggs</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Britannia Cheese Slices</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Britannia Cheese Slices</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2894,21 +2894,21 @@
                         <div class="card-body">
                            <!-- text -->
                            <div class="text-center position-relative">
-                              <a href="#!"><img src="images/products/product-img-8.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-8.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
-                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Instant Food</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Instant Food</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Kellogg's Original Cereals</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Kellogg's Original Cereals</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -2956,10 +2956,10 @@
                      <div class="card card-product">
                         <div class="card-body">
                            <div class="text-center position-relative">
-                              <a href="#!"><img src="images/products/product-img-9.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-9.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
                                     <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i>
                                  </a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
@@ -2968,9 +2968,9 @@
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Snack & Munchies</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Snack & Munchies</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Slurrp Millet Chocolate</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Slurrp Millet Chocolate</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
@@ -3018,19 +3018,19 @@
                      <div class="card card-product">
                         <div class="card-body">
                            <div class="text-center position-relative">
-                              <a href="#!"><img src="images/products/product-img-10.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
+                              <a th:href="@{/product}"><img src="images/products/product-img-10.jpg" alt="Grocery Ecommerce Template" class="mb-3 img-fluid" /></a>
                               <!-- action btn -->
                               <div class="card-product-action">
-                                 <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye"></i></a>
+                                 <a th:href="@{/product}" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="bi bi-eye"></i></a>
                                  <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist"><i class="bi bi-heart"></i></a>
                                  <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a>
                               </div>
                            </div>
                            <!-- title -->
                            <div class="text-small mb-1">
-                              <a href="#!" class="text-decoration-none text-muted"><small>Dairy, Bread & Eggs</small></a>
+                              <a th:href="@{/product}" class="text-decoration-none text-muted"><small>Dairy, Bread & Eggs</small></a>
                            </div>
-                           <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Amul Butter - 500 g</a></h2>
+                           <h2 class="fs-6"><a th:href="@{/product}" class="text-inherit text-decoration-none">Amul Butter - 500 g</a></h2>
                            <div class="text-warning">
                               <!-- rating -->
                               <small>
