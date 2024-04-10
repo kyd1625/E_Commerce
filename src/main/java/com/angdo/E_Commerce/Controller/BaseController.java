@@ -9,13 +9,32 @@ public class BaseController {
 
     @GetMapping("/home")
     public String mainPage(){
-        return "index.html";
+        return "index";
     }
     @GetMapping("/product")
     public String productDetailPage(){
         return "user_view/shop-single-2";
     }
 
-    @GetMapping("/dashboard/home") // 테스트용 변경 예정 kyd 20240407
+    @GetMapping("/dashboard/home")
     public String dashboardHome(){ return "dashboard/dashboard-index";}
+
+    @GetMapping("/dashboard/customer")
+    public String dashboardCustomer(){ return "dashboard/customers";}
+
+    @GetMapping("/dashboard/orderList")
+    public String dashboardOrderList(){ return "dashboard/order-list";}
+
+    @GetMapping("/dashboard/orderSingle")
+    public String dashboardOrderSingle(){ return "dashboard/order-single";}
+
+    @GetMapping("/dashboard/products")
+    public String dashboardProducts(){ return "dashboard/products";}
+
+    @GetMapping("/dashboard/reviews")
+    public String dashboardReviews(){ return "dashboard/reviews";}
+
+    @GetMapping("/dashboard/categories")
+    public String dashboardCategories(){ return "dashboard/categories";}
+
 }
