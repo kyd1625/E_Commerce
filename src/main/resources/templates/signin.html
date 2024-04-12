@@ -7,15 +7,15 @@
       <meta content="Codescandy" name="author" />
       <title>Sign in eCommerce HTML Template - FreshCart</title>
       <!-- Favicon icon-->
-      <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico" />
+      <link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon.ico" />
 
       <!-- Libs CSS -->
-      <link href="../assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
-      <link href="../assets/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
-      <link href="../assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+      <link href="libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+      <link href="libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
+      <link href="libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
 
       <!-- Theme CSS -->
-      <link rel="stylesheet" href="../assets/css/theme.min.css" />
+      <link rel="stylesheet" href="css/theme.min.css" />
    </head>
 
    <body>
@@ -23,12 +23,12 @@
       <div class="border-bottom shadow-sm">
          <nav class="navbar navbar-light py-2">
             <div class="container justify-content-center justify-content-lg-between">
-               <a class="navbar-brand" href="index.html">
-                  <img src="../assets/images/logo/freshcart-logo.svg" alt="" class="d-inline-block align-text-top" />
+               <a class="navbar-brand" th:href="@{/home}">
+                  <img src="images/logo/freshcart-logo.svg" alt="" class="d-inline-block align-text-top" />
                </a>
                <span class="navbar-text">
                   Already have an account?
-                  <a href="../pages/signin.html">Sign in</a>
+                  <a th:href="@{/signin}">Sign in</a>
                </span>
             </div>
          </nav>
@@ -42,7 +42,7 @@
                <div class="row justify-content-center align-items-center">
                   <div class="col-12 col-md-6 col-lg-4 order-lg-1 order-2">
                      <!-- img -->
-                     <img src="../assets/images/svg-graphics/signin-g.svg" alt="" class="img-fluid" />
+                     <img src="images/svg-graphics/signin-g.svg" alt="" class="img-fluid" />
                   </div>
                   <!-- col -->
                   <div class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1">
@@ -81,7 +81,7 @@
                               </div>
                               <div>
                                  Forgot password?
-                                 <a href="../pages/forgot-password.html">Reset It</a>
+                                 <a th:href="@{/forgotPW}">Reset It</a>
                               </div>
                            </div>
                            <!-- btn -->
@@ -89,7 +89,7 @@
                            <!-- link -->
                            <div>
                               Don’t have an account?
-                              <a href="../pages/signup.html">Sign Up</a>
+                              <a th:href="@{/signup}">Sign Up</a>
                            </div>
                         </div>
                      </form>
@@ -110,29 +110,29 @@
                      <div class="col-6">
                         <!-- list -->
                         <ul class="nav flex-column">
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Vegetables & Fruits</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Breakfast & instant food</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Bakery & Biscuits</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Atta, rice & dal</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Sauces & spreads</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Organic & gourmet</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Baby care</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Cleaning essentials</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Personal care</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Vegetables & Fruits</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Breakfast & instant food</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Bakery & Biscuits</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Atta, rice & dal</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Sauces & spreads</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Organic & gourmet</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Baby care</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Cleaning essentials</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Personal care</a></li>
                         </ul>
                      </div>
                      <div class="col-6">
                         <!-- list -->
                         <ul class="nav flex-column">
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Dairy, bread & eggs</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Cold drinks & juices</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Tea, coffee & drinks</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Masala, oil & more</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Chicken, meat & fish</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Paan corner</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Pharma & wellness</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Home & office</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Pet care</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Dairy, bread & eggs</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Cold drinks & juices</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Tea, coffee & drinks</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Masala, oil & more</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Chicken, meat & fish</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Paan corner</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Pharma & wellness</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Home & office</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Pet care</a></li>
                         </ul>
                      </div>
                   </div>
@@ -143,11 +143,11 @@
                         <h6 class="mb-4">Get to know us</h6>
                         <!-- list -->
                         <ul class="nav flex-column">
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Company</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">About</a></li>
-                           <li class="nav-item mb-2"><a href="#1" class="nav-link">Blog</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Help Center</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Our Value</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Company</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">About</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Blog</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Help Center</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Our Value</a></li>
                         </ul>
                      </div>
                      <div class="col-6 col-sm-6 col-md-3">
@@ -158,29 +158,29 @@
                            <li class="nav-item mb-2"><a href="#!" class="nav-link">Shipping</a></li>
                            <li class="nav-item mb-2"><a href="#!" class="nav-link">Product Returns</a></li>
                            <li class="nav-item mb-2"><a href="#!" class="nav-link">FAQ</a></li>
-                           <li class="nav-item mb-2"><a href="../pages/shop-checkout.html" class="nav-link">Shop Checkout</a></li>
+                           <li class="nav-item mb-2"><a href="shop-checkout.html" class="nav-link">Shop Checkout</a></li>
                         </ul>
                      </div>
                      <div class="col-6 col-sm-6 col-md-3">
                         <h6 class="mb-4">Become a Shopper</h6>
                         <ul class="nav flex-column">
                            <!-- list -->
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Shopper Opportunities</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Become a Shopper</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Earnings</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Ideas & Guides</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">New Retailers</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Shopper Opportunities</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Become a Shopper</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Earnings</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Ideas & Guides</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">New Retailers</a></li>
                         </ul>
                      </div>
                      <div class="col-6 col-sm-6 col-md-3">
                         <h6 class="mb-4">Freshcart programs</h6>
                         <ul class="nav flex-column">
                            <!-- list -->
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Freshcart programs</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Gift Cards</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Promos & Coupons</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Freshcart Ads</a></li>
-                           <li class="nav-item mb-2"><a href="#!" class="nav-link">Careers</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Freshcart programs</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Gift Cards</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Promos & Coupons</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Freshcart Ads</a></li>
+                           <li class="nav-item mb-2"><a th:href="@{/product}" class="nav-link">Careers</a></li>
                         </ul>
                      </div>
                   </div>
@@ -192,19 +192,19 @@
                      <ul class="list-inline mb-0">
                         <li class="list-inline-item text-dark">Payment Partners</li>
                         <li class="list-inline-item">
-                           <a href="#!"><img src="../assets/images/payment/amazonpay.svg" alt="" /></a>
+                           <a href="#!"><img src="images/payment/amazonpay.svg" alt="" /></a>
                         </li>
                         <li class="list-inline-item">
-                           <a href="#!"><img src="../assets/images/payment/american-express.svg" alt="" /></a>
+                           <a href="#!"><img src="images/payment/american-express.svg" alt="" /></a>
                         </li>
                         <li class="list-inline-item">
-                           <a href="#!"><img src="../assets/images/payment//mastercard.svg" alt="" /></a>
+                           <a href="#!"><img src="images/payment//mastercard.svg" alt="" /></a>
                         </li>
                         <li class="list-inline-item">
-                           <a href="#!"><img src="../assets/images/payment/paypal.svg" alt="" /></a>
+                           <a href="#!"><img src="images/payment/paypal.svg" alt="" /></a>
                         </li>
                         <li class="list-inline-item">
-                           <a href="#!"><img src="../assets/images/payment/visa.svg" alt="" /></a>
+                           <a href="#!"><img src="images/payment/visa.svg" alt="" /></a>
                         </li>
                      </ul>
                   </div>
@@ -212,10 +212,10 @@
                      <ul class="list-inline mb-0 text-lg-end text-center">
                         <li class="list-inline-item mb-2 mb-md-0 text-dark">Get deliveries with FreshCart</li>
                         <li class="list-inline-item ms-4">
-                           <a href="#!"><img src="../assets/images/appbutton/appstore-btn.svg" alt="" style="width: 140px" /></a>
+                           <a href="#!"><img src="images/appbutton/appstore-btn.svg" alt="" style="width: 140px" /></a>
                         </li>
                         <li class="list-inline-item">
-                           <a href="#!"><img src="../assets/images/appbutton/googleplay-btn.svg" alt="" style="width: 140px" /></a>
+                           <a href="#!"><img src="images/appbutton/googleplay-btn.svg" alt="" style="width: 140px" /></a>
                         </li>
                      </ul>
                   </div>
@@ -272,14 +272,14 @@
       </footer>
       <!-- Javascript-->
       <!-- Libs JS -->
-      <!-- <script src="../assets/libs/jquery/dist/jquery.min.js"></script> -->
-      <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
+      <!-- <script src="libs/jquery/dist/jquery.min.js"></script> -->
+      <script src="libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="libs/simplebar/dist/simplebar.min.js"></script>
 
       <!-- Theme JS -->
-      <script src="../assets/js/theme.min.js"></script>
+      <script src="js/theme.min.js"></script>
 
-      <script src="../assets/js/vendors/password.js"></script>
-      <script src="../assets/js/vendors/validation.js"></script>
+      <script src="js/vendors/password.js"></script>
+      <script src="js/vendors/validation.js"></script>
    </body>
 </html>
