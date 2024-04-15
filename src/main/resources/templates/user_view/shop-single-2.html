@@ -340,13 +340,13 @@
                      </button>
                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 
-                        <li><a class="dropdown-item" href="shop-single-2.html">Dairy, Bread & Eggs</a></li>
-                        <li><a class="dropdown-item" href="shop-single-2.html">Snacks & Munchies</a></li>
-                        <li><a class="dropdown-item" href="shop-single-2.html">Fruits & Vegetables</a></li>
-                        <li><a class="dropdown-item" href="shop-single-2.html">Cold Drinks & Juices</a></li>
-                        <li><a class="dropdown-item" href="shop-single-2.html">Breakfast & Instant Food</a></li>
-                        <li><a class="dropdown-item" href="shop-single-2.html">Bakery & Biscuits</a></li>
-                        <li><a class="dropdown-item" href="shop-single-2.html">Chicken, Meat & Fish</a></li>
+                        <li><a class="dropdown-item"  th:href="@{/product}">Dairy, Bread & Eggs</a></li>
+                        <li><a class="dropdown-item"  th:href="@{/product}">Snacks & Munchies</a></li>
+                        <li><a class="dropdown-item"  th:href="@{/product}">Fruits & Vegetables</a></li>
+                        <li><a class="dropdown-item"  th:href="@{/product}">Cold Drinks & Juices</a></li>
+                        <li><a class="dropdown-item"  th:href="@{/product}">Breakfast & Instant Food</a></li>
+                        <li><a class="dropdown-item"  th:href="@{/product}">Bakery & Biscuits</a></li>
+                        <li><a class="dropdown-item"  th:href="@{/product}">Chicken, Meat & Fish</a></li>
 
                         <li><a class="dropdown-item" th:href="@{/product}">Dairy, Bread & Eggs</a></li>
                         <li><a class="dropdown-item" th:href="@{/product}">Snacks & Munchies</a></li>
@@ -377,10 +377,10 @@
                               <li class="dropdown-submenu dropend">
                                  <a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">My Account</a>
                                  <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="account-orders.html">Orders</a></li>
-                                    <li><a class="dropdown-item" href="account-settings.html">Settings</a></li>
-                                    <li><a class="dropdown-item" href="account-address.html">Address</a></li>
-                                    <li><a class="dropdown-item" href="account-payment-method.html">Payment Method</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/orderList}">Orders</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/settting}">Settings</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/account_address}">Address</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/payment_method}">Payment Method</a></li>
                                  </ul>
                               </li>
                            </ul>
