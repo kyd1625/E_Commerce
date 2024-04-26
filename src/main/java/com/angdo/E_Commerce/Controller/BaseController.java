@@ -1,11 +1,18 @@
 package com.angdo.E_Commerce.Controller;
 
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import com.angdo.E_Commerce.Service.userService;
+
 
 @Controller
 public class BaseController {
+
+    private userService userService;
 
     @GetMapping("/home")
     public String mainPage(){
@@ -20,6 +27,9 @@ public class BaseController {
     public String signinPage(){
         return "signin";
     }
+
+
+
 
     @GetMapping("/signup")
     public String signupPage(){

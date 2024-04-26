@@ -1,16 +1,16 @@
 package com.angdo.E_Commerce.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 @Entity
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
+@Table(name="commerce_basket")
 public class commerce_basket {
 
     @Id
