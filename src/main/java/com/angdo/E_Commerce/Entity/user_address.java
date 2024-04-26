@@ -1,13 +1,15 @@
 package com.angdo.E_Commerce.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import jakarta.persistence.*;
+
+import lombok.*;
 
 @Entity
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
+@IdClass(UserAddressId.class)
+@Table(name="user_address")
 public class user_address {
 
     @Id
@@ -21,4 +23,7 @@ public class user_address {
     private String address_type;
 
     private String address;
+
+
+
 }
