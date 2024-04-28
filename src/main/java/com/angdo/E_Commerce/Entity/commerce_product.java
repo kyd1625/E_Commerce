@@ -3,11 +3,15 @@ package com.angdo.E_Commerce.Entity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Entity
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
+@IdClass(ProductId.class)
+@Table(name="commerce_product")
 public class commerce_product {
 
     @Id   // PK

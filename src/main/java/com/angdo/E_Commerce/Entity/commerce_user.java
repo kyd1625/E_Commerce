@@ -1,15 +1,17 @@
 package com.angdo.E_Commerce.Entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-
+import lombok.NoArgsConstructor;
 import java.util.Date;
 
 @Entity
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
+@IdClass(UserId.class)
+@Table(name="commerce_user")
 public class commerce_user {
 
     @Id   // PK
