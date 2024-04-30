@@ -1,9 +1,13 @@
 package com.angdo.E_Commerce.Entity;
 
+import com.angdo.E_Commerce.Dto.UserDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -28,4 +32,16 @@ public class commerce_user {
 
     private Date user_create_dt;
 
+    public static commerce_user toUserEntity(UserDTO userDTO){
+        commerce_user commerce_user = new commerce_user();
+        commerce_user.setUser_id(userDTO.getUser_id());
+        commerce_user.setUser_password(userDTO.getUser_password());
+        commerce_user.setUser_nm(userDTO.getUser_nm());
+        commerce_user.setUser_email(userDTO.getUser_email());
+
+        LocalDateTime now = LocalDateTime.now();
+        Date date = java.sql.Timestamp.valueOf(now);
+        commerce_user.setUser_create_dt(date);
+        return commerce_user;
+    }
 }
