@@ -28,9 +28,6 @@ public class BaseController {
         return "signin";
     }
 
-
-
-
     @GetMapping("/signup")
     public String signupPage(){
         return "signup";
