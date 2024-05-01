@@ -51,22 +51,22 @@
                         <p>Welcome back to FreshCart! Enter your email to get started.</p>
                      </div>
 
-                     <form class="needs-validation" novalidate>
+                     <form class="needs-validation" action="/signin" method="post">
                         <div class="row g-3">
                            <!-- row -->
 
                            <div class="col-12">
                               <!-- input -->
-                              <label for="formSigninEmail" class="form-label visually-hidden">Email address</label>
-                              <input type="email" class="form-control" id="formSigninEmail" placeholder="Email" required />
-                              <div class="invalid-feedback">Please enter name.</div>
+                              <label for="formSigninId" class="form-label visually-hidden">ID</label>
+                              <input type="text" class="form-control" id="formSigninId" name="user_id" placeholder="ID" required />
+                              <div class="invalid-feedback">Please enter ID.</div>
                            </div>
                            <div class="col-12">
                               <!-- input -->
                               <div class="password-field position-relative">
                                  <label for="formSigninPassword" class="form-label visually-hidden">Password</label>
                                  <div class="password-field position-relative">
-                                    <input type="password" class="form-control fakePassword" id="formSigninPassword" placeholder="*****" required />
+                                    <input type="password" class="form-control fakePassword" name="user_password" id="formSigninPassword" placeholder="*****" required />
                                     <span><i class="bi bi-eye-slash passwordToggler"></i></span>
                                     <div class="invalid-feedback">Please enter password.</div>
                                  </div>

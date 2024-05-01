@@ -19,7 +19,8 @@ import java.util.Date;
 public class commerce_user {
 
     @Id   // PK
-    private String user_id;
+    @Column(name="user_id")
+    private String userId;
 
     @Id
     private String user_nm;
@@ -34,7 +35,7 @@ public class commerce_user {
 
     public static commerce_user toUserEntity(UserDTO userDTO){
         commerce_user commerce_user = new commerce_user();
-        commerce_user.setUser_id(userDTO.getUser_id());
+        commerce_user.setUserId(userDTO.getUser_id());
         commerce_user.setUser_password(userDTO.getUser_password());
         commerce_user.setUser_nm(userDTO.getUser_nm());
         commerce_user.setUser_email(userDTO.getUser_email());
