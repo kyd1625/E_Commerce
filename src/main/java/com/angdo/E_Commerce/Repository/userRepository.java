@@ -9,5 +9,6 @@ import java.util.Optional;
 
 @Repository
 public interface userRepository extends JpaRepository<commerce_user, UserId> {
-
+    // ID로 회원 정보 조회 ( select * from commerce_user where user_id = ? )
+    Optional<commerce_user> findByUserId(String UserId);
 }
