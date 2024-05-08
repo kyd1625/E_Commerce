@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
    <head>
       <!-- Required meta tags -->
       <meta charset="utf-8" />
@@ -7,40 +7,29 @@
       <meta content="Codescandy" name="author" />
       <title>Products Dashboard eCommerce HTML Template - FreshCart</title>
       <!-- Favicon icon-->
-      <link rel="shortcut icon" type="image/x-icon" href="../images/favicon/favicon.ico" />
+      <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon/favicon.ico}"/>
 
       <!-- Libs CSS -->
-      <link href="../libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
-      <link href="../libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
-      <link href="../libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+      <link th:href="@{/libs/bootstrap-icons/font/bootstrap-icons.min.css}" rel="stylesheet" />
+      <link th:href="@{/libs/feather-webfont/dist/feather-icons.css}" rel="stylesheet" />
+      <link th:href="@{/libs/simplebar/dist/simplebar.min.css}" rel="stylesheet" />
 
       <!-- Theme CSS -->
-      <link rel="stylesheet" href="../css/theme.min.css" />
-
-      <!-- JQuery -->
-      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-                  <script type="text/javascript">
-                     $(document).ready( function() {
-
-                        $("#sidenav").load("./dashboard-sidenav.html");
-                        $("#headnav").load("./dashboard-headnav.html");
+      <link rel="stylesheet" type="text/css" th:href="@{/css/theme.min.css}"/>
 
 
-                     });
-                  </script>
    </head>
 
    <body>
       <!-- main wrapper-->
 
       <!-- navbar -->
-      <nav id="headnav"></nav>
+      <nav th:insert="~{dashboard/dashboard-headnav :: dashboard-headnav}"></nav>
 
       <div class="main-wrapper">
          <!-- navbar vertical -->
          <!-- navbar -->
-         <nav id="sidenav"></nav>
+         <nav th:insert="~{dashboard/dashboard-sidenav :: dashboard-sidenav}"></nav>
 
          <!-- main -->
          <main class="main-content-wrapper">
@@ -121,7 +110,7 @@
                                           </div>
                                        </td>
                                        <td>
-                                          <a href="#!"><img src="../images/products/product-img-1.jpg" alt="" class="icon-shape icon-md" /></a>
+                                          <a href="#!"><img src="../../static/images/products/product-img-1.jpg" alt="" class="icon-shape icon-md" /></a>
                                        </td>
                                        <td><a href="#" class="text-reset">Haldiram's Sev Bhujia</a></td>
                                        <td>Snack & Munchies</td>
@@ -161,7 +150,7 @@
                                           </div>
                                        </td>
                                        <td>
-                                          <a href="#!"><img src="../images/products/product-img-2.jpg" alt="" class="icon-shape icon-md" /></a>
+                                          <a href="#!"><img src="../../static/images/products/product-img-2.jpg" alt="" class="icon-shape icon-md" /></a>
                                        </td>
                                        <td><a href="#" class="text-reset">NutriChoice Digestive</a></td>
                                        <td>Bakery & Biscuits</td>
@@ -201,7 +190,7 @@
                                           </div>
                                        </td>
                                        <td>
-                                          <a href="#!"><img src="../images/products/product-img-3.jpg" alt="" class="icon-shape icon-md" /></a>
+                                          <a href="#!"><img src="../../static/images/products/product-img-3.jpg" alt="" class="icon-shape icon-md" /></a>
                                        </td>
                                        <td><a href="#" class="text-reset">Cadbury 5 Star Chocolate</a></td>
                                        <td>Snack & Munchies</td>
@@ -241,7 +230,7 @@
                                           </div>
                                        </td>
                                        <td>
-                                          <a href="#!"><img src="../images/products/product-img-4.jpg" alt="" class="icon-shape icon-md" /></a>
+                                          <a href="#!"><img src="../../static/images/products/product-img-4.jpg" alt="" class="icon-shape icon-md" /></a>
                                        </td>
                                        <td><a href="#" class="text-reset">Onion Flavour Potato</a></td>
                                        <td>Snack & Munchies</td>
@@ -281,7 +270,7 @@
                                           </div>
                                        </td>
                                        <td>
-                                          <a href="#!"><img src="../images/products/product-img-5.jpg" alt="" class="icon-shape icon-md" /></a>
+                                          <a href="#!"><img src="../../static/images/products/product-img-5.jpg" alt="" class="icon-shape icon-md" /></a>
                                        </td>
                                        <td><a href="#" class="text-reset">Salted Instant Popcorn</a></td>
                                        <td>Instant Food</td>
@@ -321,7 +310,7 @@
                                           </div>
                                        </td>
                                        <td>
-                                          <a href="#!"><img src="../images/products/product-img-6.jpg" alt="" class="icon-shape icon-md" /></a>
+                                          <a href="#!"><img src="../../static/images/products/product-img-6.jpg" alt="" class="icon-shape icon-md" /></a>
                                        </td>
                                        <td><a href="#" class="text-reset">Blueberry Greek Yogurt</a></td>
                                        <td>Dairy, Bread & Eggs</td>
@@ -361,7 +350,7 @@
                                           </div>
                                        </td>
                                        <td>
-                                          <a href="#!"><img src="../images/products/product-img-7.jpg" alt="" class="icon-shape icon-md" /></a>
+                                          <a href="#!"><img src="../../static/images/products/product-img-7.jpg" alt="" class="icon-shape icon-md" /></a>
                                        </td>
                                        <td><a href="#" class="text-reset">Britannia Cheese Slices</a></td>
                                        <td>Dairy, Bread & Eggs</td>
@@ -401,7 +390,7 @@
                                           </div>
                                        </td>
                                        <td>
-                                          <a href="#!"><img src="../images/products/product-img-8.jpg" alt="" class="icon-shape icon-md" /></a>
+                                          <a href="#!"><img src="../../static/images/products/product-img-8.jpg" alt="" class="icon-shape icon-md" /></a>
                                        </td>
                                        <td><a href="#" class="text-reset">Blueberry Greek Yogurt</a></td>
                                        <td>Instant Food</td>
@@ -441,7 +430,7 @@
                                           </div>
                                        </td>
                                        <td>
-                                          <a href="#!"><img src="../images/products/product-img-9.jpg" alt="" class="icon-shape icon-md" /></a>
+                                          <a href="#!"><img src="../../static/images/products/product-img-9.jpg" alt="" class="icon-shape icon-md" /></a>
                                        </td>
                                        <td><a href="#" class="text-reset">Slurrp Millet Chocolate</a></td>
                                        <td>Instant Food</td>
@@ -481,7 +470,7 @@
                                           </div>
                                        </td>
                                        <td>
-                                          <a href="#!"><img src="../images/products/product-img-10.jpg" alt="" class="icon-shape icon-md" /></a>
+                                          <a href="#!"><img src="../../static/images/products/product-img-10.jpg" alt="" class="icon-shape icon-md" /></a>
                                        </td>
                                        <td><a href="#" class="text-reset">Amul Butter - 500 g</a></td>
                                        <td>Instant Food</td>
@@ -537,11 +526,11 @@
       </div>
 
       <!-- Libs JS -->
-      <!-- <script src="../libs/jquery/dist/jquery.min.js"></script> -->
-      <script src="../libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="../libs/simplebar/dist/simplebar.min.js"></script>
+      <!-- <script src="../../static/libs/jquery/dist/jquery.min.js"></script> -->
+      <script th:src="@{/libs/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
+      <script th:src="@{/libs/simplebar/dist/simplebar.min.js}"></script>
 
       <!-- Theme JS -->
-      <script src="../js/theme.min.js"></script>
+      <script th:src="@{/js/theme.min.js}"></script>
    </body>
 </html>

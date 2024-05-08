@@ -7,39 +7,28 @@
       <meta content="Codescandy" name="author" />
       <title>Vendor Grid Dashboard eCommerce HTML Template - FreshCart</title>
       <!-- Favicon icon-->
-      <link rel="shortcut icon" type="image/x-icon" href="../images/favicon/favicon.ico" />
+      <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon/favicon.ico}"/>
 
       <!-- Libs CSS -->
-      <link href="../libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
-      <link href="../libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
-      <link href="../libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+      <link th:href="@{/libs/bootstrap-icons/font/bootstrap-icons.min.css}" rel="stylesheet" />
+      <link th:href="@{/libs/feather-webfont/dist/feather-icons.css}" rel="stylesheet" />
+      <link th:href="@{/libs/simplebar/dist/simplebar.min.css}" rel="stylesheet" />
 
       <!-- Theme CSS -->
-      <link rel="stylesheet" href="../css/theme.min.css" />
-
-      <!-- JQuery -->
-      <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-                  <script type="text/javascript">
-                     $(document).ready( function() {
-
-                        $("#sidenav").load("./dashboard-sidenav.html");
-                        $("#headnav").load("./dashboard-headnav.html");
+      <link rel="stylesheet" type="text/css" th:href="@{/css/theme.min.css}"/>
 
 
-                     });
-                  </script>
    </head>
 
    <body>
       <!-- main wrapper -->
       <!-- navbar -->
-      <nav id="headnav"></nav>
+      <nav th:insert="~{dashboard/dashboard-headnav :: dashboard-headnav}"></nav>
 
       <div class="main-wrapper">
          <!-- navbar vertical -->
          <!-- navbar -->
-         <nav id="sidenav"></nav>
+         <nav th:insert="~{dashboard/dashboard-sidenav :: dashboard-sidenav}"></nav>
 
          <!-- main -->
          <main class="main-content-wrapper">
@@ -88,7 +77,7 @@
                         <div class="card-body p-6">
                            <div>
                               <!-- img -->
-                              <img src="../images/stores-logo/stores-logo-1.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
+                              <img src="../../static/images/stores-logo/stores-logo-1.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
                               <!-- content -->
                               <h2 class="mb-2 h5"><a href="#!" class="text-inherit">E-Grocery Super Market</a></h2>
                               <div class="mb-2">Seller ID: #009</div>
@@ -114,7 +103,7 @@
                         <div class="card-body p-6">
                            <div>
                               <!-- img -->
-                              <img src="../images/stores-logo/stores-logo-2.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
+                              <img src="../../static/images/stores-logo/stores-logo-2.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
 
                               <!-- content -->
                               <h2 class="mb-2 h5"><a href="#!" class="text-inherit">DealShare Mart</a></h2>
@@ -141,7 +130,7 @@
                         <div class="card-body p-6">
                            <div>
                               <!-- img -->
-                              <img src="../images/stores-logo/stores-logo-3.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
+                              <img src="../../static/images/stores-logo/stores-logo-3.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
 
                               <!-- content -->
                               <h2 class="mb-2 h5"><a href="#!" class="text-inherit">DMart</a></h2>
@@ -168,7 +157,7 @@
                         <div class="card-body p-6">
                            <div>
                               <!-- img -->
-                              <img src="../images/stores-logo/stores-logo-4.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
+                              <img src="../../static/images/stores-logo/stores-logo-4.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
 
                               <!-- content -->
                               <h2 class="mb-2 h5"><a href="#!" class="text-inherit">Blinkit Store</a></h2>
@@ -195,7 +184,7 @@
                         <div class="card-body p-6">
                            <div>
                               <!-- img -->
-                              <img src="../images/stores-logo/stores-logo-5.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
+                              <img src="../../static/images/stores-logo/stores-logo-5.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
 
                               <!-- content -->
                               <h2 class="mb-2 h5"><a href="#!" class="text-inherit">StoreFront Super Market</a></h2>
@@ -222,7 +211,7 @@
                         <div class="card-body p-6">
                            <div>
                               <!-- img -->
-                              <img src="../images/stores-logo/stores-logo-6.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
+                              <img src="../../static/images/stores-logo/stores-logo-6.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
 
                               <!-- content -->
                               <h2 class="mb-2 h5"><a href="#!" class="text-inherit">BigBasket</a></h2>
@@ -249,7 +238,7 @@
                         <div class="card-body p-6">
                            <div>
                               <!-- img -->
-                              <img src="../images/stores-logo/stores-logo-7.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
+                              <img src="../../static/images/stores-logo/stores-logo-7.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
 
                               <!-- content -->
                               <h2 class="mb-2 h5"><a href="#!" class="text-inherit">Swiggy Instamart</a></h2>
@@ -276,7 +265,7 @@
                         <div class="card-body p-6">
                            <div>
                               <!-- img -->
-                              <img src="../images/stores-logo/stores-logo-8.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
+                              <img src="../../static/images/stores-logo/stores-logo-8.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
 
                               <!-- content -->
                               <h2 class="mb-2 h5"><a href="#!" class="text-inherit">Online Grocery Mart</a></h2>
@@ -303,7 +292,7 @@
                         <div class="card-body p-6">
                            <div>
                               <!-- img -->
-                              <img src="../images/stores-logo/stores-logo-9.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
+                              <img src="../../static/images/stores-logo/stores-logo-9.svg" alt="" class="rounded-circle icon-shape icon-xxl mb-6" />
                               <!-- content -->
                               <h2 class="mb-2 h5"><a href="#!" class="text-inherit">Spencers</a></h2>
                               <div class="mb-2">Seller ID: #001</div>
@@ -329,11 +318,11 @@
       </div>
 
       <!-- Libs JS -->
-      <!-- <script src="../libs/jquery/dist/jquery.min.js"></script> -->
-      <script src="../libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-      <script src="../libs/simplebar/dist/simplebar.min.js"></script>
+      <!-- <script src="../../static/libs/jquery/dist/jquery.min.js"></script> -->
+      <script th:src="@{/libs/bootstrap/dist/js/bootstrap.bundle.min.js}"></script>
+      <script th:src="@{/libs/simplebar/dist/simplebar.min.js}"></script>
 
       <!-- Theme JS -->
-      <script src="../js/theme.min.js"></script>
+      <script th:src="@{/js/theme.min.js}"></script>
    </body>
 </html>
