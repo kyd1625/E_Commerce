@@ -1,11 +1,9 @@
 package com.angdo.E_Commerce.Controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import com.angdo.E_Commerce.Service.userService;
 
 
@@ -24,8 +22,21 @@ public class BaseController {
     }
 
     @GetMapping("/signin")
-    public String signinPage(){
-        return "signin";
+    public String signinPage(@SessionAttribute(name = "loginId", required = false) String loginId){
+
+        System.out.println("session Id : "+loginId);
+        if(loginId != null){
+            return "redirect:/orderList";
+        } else {
+            return "signin";
+        }
+    }
+
+    @GetMapping("/logout")
+    public String userLogout(HttpServletRequest request){
+        HttpSession session = request.getSession(false);
+        session.invalidate(); // 로그아웃시 세션 파기
+        return "redirect:/home";
     }
 
     @GetMapping("/signup")

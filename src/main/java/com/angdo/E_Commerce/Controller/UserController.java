@@ -27,6 +27,7 @@ public class UserController {
         if(loginResult != null){
             // 로그인 성공
             session.setAttribute("loginId",loginResult.getUser_id());
+            session.setMaxInactiveInterval(600); // 세션 시간 600초 = 10분
             return "index";
         } else {
             // 로그인 실패
