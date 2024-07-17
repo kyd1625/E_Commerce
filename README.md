@@ -7,8 +7,9 @@ E_Commerce
 커밋 메시지에 추가되는 간단한 규칙
 
 ```shell
-<type>[optional scope]: <description>
+<type>: <description>
 
+ex) refactor: jpa -> mybatis 변경 작업
 ```
 * feat: - 새로운 기능 추가와 관련된 커밋 
 * fix: - 버그 수정과 관련된 커밋
