@@ -1,11 +1,11 @@
 package com.angdo.E_Commerce.Service;
 
 import com.angdo.E_Commerce.Dto.UserDTO;
-import com.angdo.E_Commerce.Entity.commerce_user;
 import com.angdo.E_Commerce.Repository.userRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.angdo.E_Commerce.Dao.UserDao;
 
 import java.util.Optional;
 
@@ -16,26 +16,30 @@ public class userService {
     @Autowired
     private final userRepository userRepository;
 
-    public void save(UserDTO userDTO) {
-        // 1. dto -> entity 객체로 변환
-        // 2. repository의 save 메소드 호출
-        commerce_user userEntity = commerce_user.toUserEntity(userDTO);
+    final UserDao userDao;
 
-        // repository의 save 메소드 호출 (entity 를 넘겨줘야함)
-        userRepository.save(userEntity);
+    public void save(UserDTO userDTO) {
+        // 가입된 회원인지 먼저 체크
+        UserDTO userInfo = userDao.getUserById(userDTO);
+        if(userInfo != null){
+            throw new RuntimeException("이미 가입된 회원입니다.");
+        } else {
+            userDao.insUser(userDTO);
+            // 회원가입 완료
+            System.out.println("회원가입완료");
+        }
     }
 
     public UserDTO login(UserDTO userDTO) {
         // ID 를 DB에서 조회하고 조회한 비밀번호가 일치하는지 확인
-        Optional<commerce_user> byUserId = userRepository.findByUserId(userDTO.getUser_id());
-        if (byUserId.isPresent()){
+        UserDTO userInfo = userDao.getUserById(userDTO);
+
+        if (userInfo != null){
             // 가입된 회원일 때
-            commerce_user commerce_user = byUserId.get();
+            UserDTO commerce_user = userInfo;
             if (commerce_user.getUser_password().equals(userDTO.getUser_password())){
-                // 비밀번호가 일치할 때
-                // entity 객체를 dto 로 변환 후 리턴
-                UserDTO dto = UserDTO.toUserDTO(commerce_user);
-                return dto;
+                // 비밀번호가 일치할 때 dto 정보 리턴
+                return commerce_user;
             } else {
                 // 비밀번호가 틀릴때
                 return null;

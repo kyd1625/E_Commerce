@@ -23,15 +23,7 @@ public class BaseController {
         return "user_view/shop-single-2";
     }
 
-    @GetMapping("/signin")
-    public String signinPage(){
-        return "signin";
-    }
 
-    @GetMapping("/signup")
-    public String signupPage(){
-        return "signup";
-    }
 
 
     @GetMapping("/forgotPW")
