@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.angdo.E_Commerce.Dao.ProductDao">
+
+    <!-- 메인페이지 카테고리 -->
+    <select id="getAllCategory" parameterType="com.angdo.E_Commerce.Dto.ProductDTO" resultType="arraylist">
+        SELECT product_category
+        FROM commerce_product
+        GROUP BY product_category
+    </select>
+
+    <!-- 메인페이지 상품 List -->
+    <select id="getAllProduct" parameterType="com.angdo.E_Commerce.Dto.ProductDTO" resultType="com.angdo.E_Commerce.Dto.ProductDTO">
+        SELECT       product_no
+             ,       product_nm
+             ,       product_category
+             ,       product_price
+             ,       product_sts
+             ,       product_inventory
+             ,       product_details
+        FROM commerce_product
+        WHERE 1=1
+        <if test="product_category != null">
+        AND product_category = #{product_category}
+        </if>
+    </select>
+
+    <!-- 상품 상세 조회 질문 : getAllProduct + getProductDetails 동적 쿼리로 가능 할거같은데 어떤지 리뷰 부탁 -->
+    <select id="getProductDetails" parameterType="com.angdo.E_Commerce.Dto.ProductDTO" resultType="com.angdo.E_Commerce.Dto.ProductDTO">
+        SELECT  product_no
+        ,       product_nm
+        ,       product_category
+        ,       product_price
+        ,       product_sts
+        ,       product_inventory
+        ,       product_details
+        FROM commerce_product
+        WHERE 1=1
+        <if test="product_no != null">
+            AND product_no = #{product_no}
+        </if>
+    </select>
+
+
+</mapper>
