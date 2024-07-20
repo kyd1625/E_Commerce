@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.angdo.E_Commerce.Dao.ReviewDao">
+
+    <select id="getReviewByProductNo" parameterType="int" resultType="com.angdo.E_Commerce.Dto.ReviewDTO">
+        SELECT           review_no
+             ,           product_no
+             ,           product_nm
+             ,           product_category
+             ,           user_id
+             ,           user_nm
+             ,           product_price
+             ,           product_sts
+             ,           review_score
+             ,           review_text
+        FROM product_review
+        WHERE product_no = #{productNo}
+    </select>
+
+    <select id="getReviewByUserId" parameterType="String" resultType="com.angdo.E_Commerce.Dto.ReviewDTO">
+        SELECT      review_no
+             ,           product_no
+             ,           product_nm
+             ,           product_category
+             ,           user_id
+             ,           user_nm
+             ,           product_price
+             ,           product_sts
+             ,           review_score
+             ,           review_text
+        FROM product_review
+        WHERE user_id = #{user_id}
+    </select>
+
+    <insert id="insertReview" parameterType="com.angdo.E_Commerce.Dto.ReviewDTO">
+        INSERT INTO product_review
+        (
+                    review_no
+        ,           product_no
+        ,           product_nm
+        ,           product_category
+        ,           user_id
+        ,           user_nm
+        ,           product_price
+        ,           product_sts
+        ,           review_score
+        ,           review_text
+        ) VALUES (
+                    #{review_no}
+        ,           #{product_no}
+        ,           #{product_nm}
+        ,           #{product_category}
+        ,           #{user_id}
+        ,           #{user_nm}
+        ,           #{product_price}
+        ,           #{product_sts}
+        ,           #{review_score}
+        ,           #{review_text}
+        )
+    </insert>
+
+</mapper>
