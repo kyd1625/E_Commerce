@@ -11,5 +11,5 @@ public interface ProductDao {
 
     ProductDTO getAllProduct(ProductDTO productDTO);
 
-    ProductDTO getProductDetails(ProductDTO productDTO);
+    ProductDTO getProductDetails(int productNo);
 }

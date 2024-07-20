@@ -8,4 +8,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface ReviewDao {
 
     ReviewDTO getReviewByProductNo(int productNo);
+
+    void insertReview(ReviewDTO reviewDTO);
 }

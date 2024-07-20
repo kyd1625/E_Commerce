@@ -4,6 +4,8 @@ import com.angdo.E_Commerce.Dto.ProductDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import com.angdo.E_Commerce.Service.productService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 @Controller
 @RequiredArgsConstructor
@@ -11,10 +13,13 @@ public class ProductController {
 
     private final productService productService;
 
-    public String getProductDetails(ProductDTO productDTO){
+    @PostMapping("/product/productDetail")
+    public String getProductDetails(@RequestBody ProductDTO productDTO){
 
-        productService.getProductDetails(productDTO);
+        System.out.println(productDTO.toString());
 
-        return "프론트 작업에 url 넣어주기 상세설명";
+        productService.getProductDetails(productDTO.getProduct_no());
+
+        return "index";
     }
 }

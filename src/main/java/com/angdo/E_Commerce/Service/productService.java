@@ -10,9 +10,11 @@ public class productService {
 
     final ProductDao productDao;
 
-    public ProductDTO getProductDetails(ProductDTO productDTO) {
+    public ProductDTO getProductDetails(int productNo) {
 
-        ProductDTO productInfo = productDao.getProductDetails(productDTO);
+        ProductDTO productInfo = productDao.getProductDetails(productNo);
+        
+        System.out.println("상품 디테일 들어옴");
 
         return productInfo;
     }

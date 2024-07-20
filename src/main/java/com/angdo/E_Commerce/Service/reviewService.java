@@ -11,12 +11,23 @@ import com.angdo.E_Commerce.Repository.reviewRepository;
 @RequiredArgsConstructor
 public class reviewService {
 
-    private ReviewDao reviewDao;
+    final ReviewDao reviewDao;
 
     public ReviewDTO getReviewByProductNo(int productNo){
 
         ReviewDTO reviewInfo = reviewDao.getReviewByProductNo(productNo);
 
         return reviewInfo;
+    }
+
+    public void insertReview(ReviewDTO reviewDTO){
+
+        System.out.println(reviewDTO.toString());
+
+        reviewDao.insertReview(reviewDTO);
+
+        System.out.println("insert 들어옴");
+
+
     }
 }
