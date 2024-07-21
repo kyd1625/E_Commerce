@@ -60,4 +60,13 @@
         )
     </insert>
 
+    <update id="updateReview" parameterType="com.angdo.E_Commerce.Dto.ReviewDTO">
+        UPDATE product_review SET
+            review_score    =   #{review_score}
+        ,   review_text     =   #{review_text}
+        WHERE   review_no       =   #{review_no}
+        AND     product_no      =   #{product_no}
+        AND     user_id         =   #{user_id}
+    </update>
+
 </mapper>

@@ -18,6 +18,7 @@ public class ReviewController {
     @PostMapping("/review/test")
     public String getReviewByProductNo(@RequestBody int productNo){
 
+        // 상품별 review 조회
         reviewService.getReviewByProductNo(productNo);
         
         return "index";
@@ -26,7 +27,17 @@ public class ReviewController {
     @PostMapping("/review/insert")
     public String insertReview(@RequestBody ReviewDTO reviewDTO){
 
+        // 리뷰 insert
         reviewService.insertReview(reviewDTO);
+
+        return "index";
+    }
+
+    @PostMapping("/reivew/update")
+    public String updateReview(@RequestBody ReviewDTO reviewDTO){
+        
+        // 리뷰 업데이트
+        reviewService.updateReview(reviewDTO);
 
         return "index";
     }
