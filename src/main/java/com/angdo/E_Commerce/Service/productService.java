@@ -10,11 +10,18 @@ public class productService {
 
     final ProductDao productDao;
 
+
+    /**
+     *
+     * 상품No로 상품상세조회
+     * parameter : productNo
+     *
+     */
     public ProductDTO getProductDetails(int productNo) {
 
         ProductDTO productInfo = productDao.getProductDetails(productNo);
         
-        System.out.println("상품 디테일 들어옴");
+        System.out.println("선택된 상품 : " + productInfo.toString());
 
         return productInfo;
     }
